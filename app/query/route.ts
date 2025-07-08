@@ -29,8 +29,8 @@ export async function GET() {
   //     'Uncomment this file and remove this line. You can delete this file when you are finished.',
   // });
   try {
-    await cleanConnect()
-  	return Response.json(await listInvoices());
+    // await cleanConnect()listInvoices
+  	return Response.json(await cleanConnect());
   } catch (error) {
   	return Response.json({ error }, { status: 500 });
   }
